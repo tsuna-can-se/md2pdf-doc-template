@@ -1,3 +1,6 @@
+docs/** -linguist-documentation
+*.md linguist-detectable
+
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.jpeg filter=lfs diff=lfs merge=lfs -text
