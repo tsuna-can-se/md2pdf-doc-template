@@ -1,0 +1,31 @@
+name: ドキュメントのビルド
+description: build-script-nameに指定したスクリプトを用いてドキュメントをビルドします。
+
+inputs:
+  build-script-name:
+    description: ドキュメントをビルドするスクリプトの名前
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Node.js のセットアップ
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - name: npm パッケージのインストール
+      shell: bash
+      run: npm ci
+
+    - name: ドキュメントのビルド
+      shell: bash
+      run: npm run ${{ inputs.build-script-name }}
+
+    - name: ドキュメントのアップロード
+      uses: actions/upload-artifact@v4
+      if: github.event_name == 'workflow_dispatch'
+      with:
+        name: documents
+        path: output
+        retention-days: 7

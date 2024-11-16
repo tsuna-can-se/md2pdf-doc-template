@@ -1,0 +1,37 @@
+name: ドキュメントのLint
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - ".github/workflows/ci-lint-documents.yml"
+      - ".github/workflows/lint-documents/action.yml"
+      - ".markdownlint-cli2.jsonc"
+      - ".markdownlint.yaml"
+      - ".textlintignore"
+      - ".textlintrc.json"
+      - "package-lock.json"
+      - "package.json"
+      - "README.md"
+  workflow_dispatch:
+
+jobs:
+  lint-all:
+    name: ドキュメントのLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: ブランチのチェックアウト
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - id: lint-documents
+        name: ドキュメントの Lint
+        continue-on-error: true
+        uses: ./.github/workflows/lint-documents
+
+      - name: Lint結果の成否判定
+        if: steps.lint-documents.outcome == 'failure'
+        run: |
+          exit 1;
