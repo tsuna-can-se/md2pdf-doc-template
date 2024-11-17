@@ -1,9 +1,11 @@
+# ドキュメント名を設定します。
 name: ドキュメントテンプレートのビルド
 
 on:
   pull_request:
     branches: [main]
     paths:
+      # ドキュメントの英語名を以下 2 行に設定します。
       - ".github/workflows/ci-document-template-build.yml"
       - "docs/_document-template/**"
       - "docs/_shared-images/**"
@@ -27,4 +29,5 @@ jobs:
         name: ドキュメントのビルドとアップロード（PR時は除く）
         uses: ./.github/workflows/build-document
         with:
+          # ドキュメント名を設定します。
           build-script-name: "build:document-template"
