@@ -1,3 +1,4 @@
+<!-- cspell:ignore tsuna -->
 # md2pdf-doc-template
 
 This is a template for a repository that manages documents in Markdown.
