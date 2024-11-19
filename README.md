@@ -45,7 +45,7 @@ npm ci
 ```
 
 続いて、 Visual Studio Code の拡張機能をインストールします。
-/.vscode/extensions.json に設定されている各種拡張機能をインストールしてください。
+\/\.vscode\/extensions.json に設定されている各種拡張機能をインストールしてください。
 
 ### ドキュメントの体裁確認
 
@@ -63,7 +63,7 @@ npm run lint
 npm run build
 ```
 
-初期状態だと、 /docs/_document-template/contents.md を PDF 化して output/ドキュメントテンプレート.pdf が生成されます。
+初期状態だと、 \/docs\/\_document-template\/contents.md を PDF 化して \/output\/ドキュメントテンプレート.pdf が生成されます。
 
 ## ドキュメントの追加方法
 
