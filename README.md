@@ -139,6 +139,16 @@ jobs:
 
 ## ドキュメントの外観設定
 
+PDF 化する際のページ設定は、 \/md-to-pdf-config.js にあります。
+ページサイズ、ページ内の余白、ヘッダー・フッターのテンプレートとスタイル設定などの項目があります。
+詳細は [md-to-pdf の README](https://github.com/simonhaenisch/md-to-pdf) をご覧ください。
+
+ページ内の細かなスタイル設定は、 \/docs\/base-style.css で調整します。
+base-style.css には、すべてのドキュメントに対して適用する CSS クラスが定義されています。
+スタイルを調整したい場合は、 md-to-pdf を `--devtools` オプション付きで実行し、 PDF に変換する前の HTML を確認してください。
+
+これらのファイルは、リポジトリ内で管理するすべてのドキュメントに対して影響を与えます。
+
 ## Authors
 
 [tsuna-can-se](https://github.com/tsuna-can-se)
