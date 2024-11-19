@@ -86,12 +86,11 @@ package.json の `scripts` に PDF 化のためのスクリプトを追加して
   }
 }
 ```
+### ドキュメントの執筆
 
-### ドキュメントの作成
-
-/docs/new-doc/contents.md を編集してドキュメントを作成します。
-Markdown は、おおよそ [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/) 形式に従います。
-詳細は [ドキュメントテンプレート](/docs/_document-template/contents.md) を参照してください。
+\/docs\/new-doc\/contents.md を編集してドキュメントを執筆します。
+Markdown の方言は、おおよそ [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/) 形式に従います。
+基本的な構文例は [ドキュメントテンプレート](/docs/_document-template/contents.md) を参照してください。
 
 ### 自動ビルドの設定
 
