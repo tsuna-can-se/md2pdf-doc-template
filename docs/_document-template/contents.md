@@ -2,7 +2,7 @@
 document_title: ドキュメントテンプレート
 dest: ./output/ドキュメントテンプレート.pdf
 ---
-
+<!-- cspell:ignore println -->
 <!-- markdownlint-disable MD033 -->
 <div class="cover">
   <div class="title">ドキュメントテンプレート</div>
@@ -172,6 +172,7 @@ URL を `< >` で囲うと、そのままリンクにできます。
 ## 画像
 
 画像は draw.io で作成した SVG 画像を使用してください。
+\*.drawio ファイルと、作成した \*.svg ファイルを images フォルダーに配置します。
 画像内に文字を入れる場合は、フォントを `Yu Gothic UI` に、フォントサイズを 16 ポイントに設定してください。
 
 画像の挿入は次のようにします。
@@ -340,5 +341,3 @@ flowchart TD
 詳細な構文については、以下をご覧ください。
 
 <https://github.github.com/gfm/>
-
-<!-- cspell:ignore println -->
