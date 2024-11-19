@@ -200,6 +200,7 @@ CSpell の設定ファイルは以下の 1 つです。
 - cspell.json
 
 cspell.json には、検証対象のファイルが設定されています。
+詳細は [GitHub | CSpell](https://github.com/streetsidesoftware/cspell) をご覧ください。
 
 ## Authors
 
