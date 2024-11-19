@@ -184,11 +184,13 @@ markdownlint の設定ファイルは以下の 2 つです。
 ### textlint
 
 textlint は、冗長な文章の検出や、単語レベルでの表記揺れ検出など、日本語の体裁を自動的に検証するツールです。
+あらかじめ、いくつかのプラグインが有効になっています。
 textlint の設定ファイルは以下の 1 つです。
 
 - \.textlintrc
 
 \.textlintrc には、 textlint の検証設定があります。
+詳細は [GitHub | textlint](https://github.com/textlint/textlint) をご覧ください。
 
 ### CSpell
 
