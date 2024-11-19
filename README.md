@@ -149,6 +149,37 @@ base-style.css には、すべてのドキュメントに対して適用する C
 
 これらのファイルは、リポジトリ内で管理するすべてのドキュメントに対して影響を与えます。
 
+## Lint ツールの設定
+
+### markdownlint
+
+markdownlint は、 Markdown の構文を統一するための検証ツールです。
+markdownlint の設定ファイルは以下の 2 つです。
+
+- \.markdownlint-cli2.jsonc
+- \.markdownlint.yaml
+
+\.markdownlint-cli2.jsonc には、検証対象のファイルが設定されています。
+\.markdownlint.yaml には、 markdownlint の検証設定があります。
+
+### textlint
+
+textlint は、冗長な文章の検出や、単語レベルでの表記揺れ検出など、日本語の体裁を自動的に検証するツールです。
+textlint の設定ファイルは以下の 1 つです。
+
+- \.textlintrc
+
+\.textlintrc には、 textlint の検証設定があります。
+
+### CSpell
+
+CSpell は、主に英単語のスペルミスを検出するツールです。
+CSpell の設定ファイルは以下の 1 つです。
+
+- cspell.json
+
+cspell.json には、検証対象のファイルが設定されています。
+
 ## Authors
 
 [tsuna-can-se](https://github.com/tsuna-can-se)
