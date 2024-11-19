@@ -176,7 +176,10 @@ markdownlint の設定ファイルは以下の 2 つです。
 - \.markdownlint.yaml
 
 \.markdownlint-cli2.jsonc には、検証対象のファイルが設定されています。
+詳細は [GitHub | markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2) をご覧ください。
+
 \.markdownlint.yaml には、 markdownlint の検証設定があります。
+詳細は [GitHub | markdownlint](https://github.com/DavidAnson/markdownlint) をご覧ください。
 
 ### textlint
 
