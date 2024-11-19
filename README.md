@@ -76,16 +76,32 @@ npm run build
 ### ビルドスクリプトの作成
 
 ドキュメントの PDF 化には npm パッケージの `md-to-pdf` を利用します。
-package.json の `scripts` に PDF 化のためのスクリプトを追加してください。
-以下テンプレートです。
+package.json の `scripts` に PDF 化のための以下のスクリプトを追加してください。
 
 ```json
 {
   "scripts": {
-    "build:<document-name>": "npx md-to-pdf --config-file ./md-to-pdf-config.json ./docs/<document-name>/contents.md",
+    "build:<ドキュメントの英語名>": "npx md-to-pdf --config-file ./md-to-pdf-config.json ./docs/<ドキュメントの英語名>/contents.md",
   }
 }
 ```
+
+ドキュメントの英語名が new-doc の場合、以下のようなスクリプトを追加します。
+
+```json
+{
+  "scripts": {
+    "build:new-doc": "npx md-to-pdf --config-file ./md-to-pdf-config.json ./docs/new-doc/contents.md",
+  }
+}
+```
+
+これにより、 new-doc を PDF 化する `npm run build:new-doc` コマンドが使えるようになります。
+また `npm run build` 実行時に、 new-doc も PDF 化されるようになります。
+
+> [!NOTE]
+> 各ドキュメントを階層構造化したい場合は、 `md-to-pdf` に渡す Markdown ファイルのパス階層を調整してください。
+
 ### ドキュメントの執筆
 
 \/docs\/new-doc\/contents.md を編集してドキュメントを執筆します。
