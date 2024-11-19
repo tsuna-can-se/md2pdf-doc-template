@@ -7,7 +7,7 @@ dest: ./output/ドキュメントテンプレート.pdf
 <div class="cover">
   <div class="title">ドキュメントテンプレート</div>
   <div class="version">v1.0.0</div>
-  <div class="date">2024-11-30</div>
+  <div class="date">yyyy-MM-dd</div>
   <div class="logo">
 
    ![your logo](/docs/_shared-images/logo.svg)
