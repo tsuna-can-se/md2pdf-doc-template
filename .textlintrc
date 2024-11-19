@@ -41,7 +41,6 @@
       }
     },
     "ja-no-orthographic-variants": true,
-    "@textlint-rule/require-header-id": false,
     "@textlint-ja/no-synonyms": {
       "allows": [
         "運用",
