@@ -94,7 +94,50 @@ Markdown の方言は、おおよそ [GitHub Flavored Markdown (GFM)](https://gi
 
 ### 自動ビルドの設定
 
+ドキュメントの単位で GitHub Actions のワークフローファイルを作成します。
+\/\.github\/workflows\/ci-document-template-build.yml をコピーして、 \/\.github\/workflows フォルダー配下にリネームして配置してください。
+ファイル名は「ci\-\<ドキュメントの英語名\>\-build.yml」としてください。
+この例では「ci-new-doc-build.yml」とします。
 
+コピーしたワークフローを以下のように修正します。
+
+```yaml
+# ドキュメント名を設定します。
+name: <ドキュメント名>のビルド
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      # ドキュメントの英語名を以下 2 行に設定します。
+      - ".github/workflows/ci-<ドキュメントの英語名>-build.yml"
+      - "docs/<ドキュメントの英語名>/**"
+      - "docs/_shared-images/**"
+      - "docs/base-style.css"
+      - "package-lock.json"
+      - "package.json"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: ドキュメントのビルド
+    runs-on: windows-latest
+    steps:
+      - name: ブランチのチェックアウト
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          lfs: true
+
+      - id: build-document
+        name: ドキュメントのビルドとアップロード（PR時は除く）
+        uses: ./.github/workflows/build-document
+        with:
+          # ドキュメント名を設定します。
+          build-script-name: "build:<ドキュメントの英語名>"
+```
+
+## ドキュメントの外観設定
 
 ## Authors
 
