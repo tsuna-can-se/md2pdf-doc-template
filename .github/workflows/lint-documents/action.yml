@@ -17,6 +17,25 @@ runs:
       shell: bash
       run: echo '# Linter Result :newspaper:' >> $GITHUB_STEP_SUMMARY
 
+    - name: CSpell の実行
+      id: run-cspell
+      continue-on-error: true
+      shell: bash
+      run: |
+        echo '## CSpell Result' >> $GITHUB_STEP_SUMMARY
+        npx cspell lint --gitignore --show-context --show-suggestions . >& cspell-result.txt
+        echo ':heavy_check_mark: CSpell に成功しました。' >> $GITHUB_STEP_SUMMARY
+
+    - name: CSpell 失敗時の結果表示
+      shell: bash
+      if: ${{ steps.run-cspell.outcome == 'failure' }}
+      run: |
+        echo ':x: CSpell に失敗しました。  ' >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        cat cspell-result.txt >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        echo 'LINT_STATUS=Error' >> $GITHUB_ENV
+
     - name: Markdownlint の実行
       id: run-markdownlint
       continue-on-error: true
