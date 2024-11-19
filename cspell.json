@@ -9,7 +9,11 @@
         ".vscode"
     ],
     "words": [
+        "drawio",
+        "markdownlint",
         "stylesheet",
-        "textlint"
+        "textlint",
+        "textlintignore",
+        "textlintrc"
     ]
 }
