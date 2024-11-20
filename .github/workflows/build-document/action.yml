@@ -1,9 +1,9 @@
-name: ドキュメントのビルド
-description: build-script-nameに指定したスクリプトを用いてドキュメントをビルドします。
+name: ドキュメントの PDF 化
+description: build-script-nameに指定したスクリプトを用いてドキュメントを PDF 化します。
 
 inputs:
   build-script-name:
-    description: ドキュメントをビルドするスクリプトの名前
+    description: ドキュメントを PDF 化するスクリプトの名前
     required: true
 
 runs:
@@ -18,9 +18,30 @@ runs:
       shell: bash
       run: npm ci
 
-    - name: ドキュメントのビルド
+    - name: ドキュメントの PDF 化処理開始
       shell: bash
-      run: npm run ${{ inputs.build-script-name }}
+      run: echo '# Document build result :newspaper:' >> $GITHUB_STEP_SUMMARY
+
+    - name: ドキュメントの PDF 化
+      id: run-md-to-pdf
+      continue-on-error: true
+      shell: bash
+      run: |
+        npm run ${{ inputs.build-script-name }} >& build-result.txt
+        echo ':heavy_check_mark: ドキュメントの PDF 化に成功しました。' >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        cat build-result.txt >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+
+    - name: ドキュメントの PDF 化失敗時の結果表示
+      shell: bash
+      if: ${{ steps.run-md-to-pdf.outcome == 'failure' }}
+      run: |
+        echo ':x: ドキュメントの PDF 化に失敗しました。  ' >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        cat build-result.txt >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        echo 'BUILD_STATUS=Error' >> $GITHUB_ENV
 
     - name: ドキュメントのアップロード
       uses: actions/upload-artifact@v4
@@ -29,3 +50,8 @@ runs:
         name: documents
         path: output
         retention-days: 7
+
+    - name: PDF 化結果の確認
+      shell: bash
+      if: ${{ env.BUILD_STATUS == 'Error' }}
+      run: exit 1
