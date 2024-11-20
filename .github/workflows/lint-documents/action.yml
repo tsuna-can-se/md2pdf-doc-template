@@ -15,14 +15,14 @@ runs:
 
     - name: Linter の処理開始
       shell: bash
-      run: echo '# Linter Result :newspaper:' >> $GITHUB_STEP_SUMMARY
+      run: echo '# Linter result :newspaper:' >> $GITHUB_STEP_SUMMARY
 
     - name: CSpell の実行
       id: run-cspell
       continue-on-error: true
       shell: bash
       run: |
-        echo '## CSpell Result' >> $GITHUB_STEP_SUMMARY
+        echo '## CSpell result' >> $GITHUB_STEP_SUMMARY
         npx cspell lint --gitignore --show-context --show-suggestions . >& cspell-result.txt
         echo ':heavy_check_mark: CSpell に成功しました。' >> $GITHUB_STEP_SUMMARY
 
@@ -41,7 +41,7 @@ runs:
       continue-on-error: true
       shell: bash
       run: |
-        echo '## Markdownlint Result' >> $GITHUB_STEP_SUMMARY
+        echo '## Markdownlint result' >> $GITHUB_STEP_SUMMARY
         npx markdownlint-cli2 --config .markdownlint-cli2.jsonc >& markdownlint-result.txt
         echo ':heavy_check_mark: Markdownlint に成功しました。' >> $GITHUB_STEP_SUMMARY
 
@@ -58,7 +58,7 @@ runs:
     - name: textlint の実行
       shell: bash
       run: |
-        echo '## textlint Result' >> $GITHUB_STEP_SUMMARY
+        echo '## textlint result' >> $GITHUB_STEP_SUMMARY
         npx textlint README.md docs --output-file textlint-result.txt --format compact
         if [ -f textlint-result.txt ]; then
           echo ':x: textlint に失敗しました。  ' >> $GITHUB_STEP_SUMMARY
