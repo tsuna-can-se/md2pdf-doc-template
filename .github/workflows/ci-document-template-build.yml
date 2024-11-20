@@ -1,0 +1,33 @@
+# ドキュメント名を設定します。
+name: ドキュメントテンプレートのビルド
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      # ドキュメントの英語名を以下 2 行に設定します。
+      - ".github/workflows/ci-document-template-build.yml"
+      - "docs/_document-template/**"
+      - "docs/_shared-images/**"
+      - "docs/base-style.css"
+      - "package-lock.json"
+      - "package.json"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: ドキュメントのビルド
+    runs-on: windows-latest
+    steps:
+      - name: ブランチのチェックアウト
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          lfs: true
+
+      - id: build-document
+        name: ドキュメントのビルドとアップロード（PR時は除く）
+        uses: ./.github/workflows/build-document
+        with:
+          # ドキュメント名を設定します。
+          build-script-name: "build:document-template"

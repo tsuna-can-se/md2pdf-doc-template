@@ -1,0 +1,10 @@
+{
+    "tableformatter.common.centerAlignedHeader": false,
+    "markdown.extension.list.indentationSize": "inherit",
+    "markdown.extension.toc.levels": "1..3",
+    "markdown.extension.toc.orderedList": false,
+    "markdown.extension.syntax.decorationFileSizeLimit": 50000000,
+    "[markdown]": {
+        "editor.tabSize": 4
+    }
+}

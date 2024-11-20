@@ -1,0 +1,100 @@
+.page-break {
+    page-break-after: always;
+}
+
+.markdown-body {
+    font-size: 16px;
+    font-family: "Yu Gothic UI", system-ui;
+}
+
+.markdown-body pre>code.hljs {
+    font-size: 14px;
+    padding: 0;
+    white-space: pre-wrap;
+}
+
+.markdown-body pre:has(> code.mermaid) {
+    background-color: #ffffff;
+}
+
+.markdown-body h1 {
+    page-break-before: always;
+    page-break-after: avoid;
+    margin-top: 0;
+}
+
+.markdown-body h2,
+h3,
+h4,
+h5,
+h6 {
+    page-break-after: avoid;
+}
+
+/* Hide the leading markers of the table of contents list. Set to hide up to heading level 4 just in case. */
+/* 目次のリストの先頭マーカーを非表示にする。念のため見出しレベル4まで非表示に設定。 */
+.markdown-body h1#目次+ul {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+.markdown-body h1#目次+ul ul {
+    list-style-type: none;
+}
+
+.markdown-body h1#目次+ul ul ul {
+    list-style-type: none;
+}
+
+.markdown-body h1#目次+ul ul ul ul {
+    list-style-type: none;
+}
+
+.markdown-body p {
+    text-indent: 1em;
+}
+
+.markdown-body svg p {
+    text-indent: 0em;
+}
+
+.cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.cover .title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 180px;
+    margin-bottom: 240px;
+}
+
+.cover .version {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.cover .date {
+    font-size: 22px;
+    margin-bottom: 60px;
+}
+
+.cover .logo {
+    width: 300px;
+}
+
+.cover .logo p {
+    text-indent: 0em;
+    margin-bottom: 0;
+}
+
+.cover .copyrights {
+    font-size: 14px;
+}
+
+/* cspell:ignore hljs */

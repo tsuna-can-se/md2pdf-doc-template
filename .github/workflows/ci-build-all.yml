@@ -1,0 +1,21 @@
+name: 全ドキュメントのビルド
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: ドキュメントのビルド
+    runs-on: windows-latest
+    steps:
+      - name: ブランチのチェックアウト
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          lfs: true
+
+      - id: build-document
+        name: 全ドキュメントのビルドとアップロード
+        uses: ./.github/workflows/build-document
+        with:
+          build-script-name: "build"
