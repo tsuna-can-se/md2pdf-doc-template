@@ -59,7 +59,7 @@ runs:
       shell: bash
       run: |
         echo '## textlint result' >> $GITHUB_STEP_SUMMARY
-        npx textlint README.md docs --output-file textlint-result.txt --format compact
+        npm run lint:textlint-all -- --output-file textlint-result.txt --format compact
         if [ -f textlint-result.txt ]; then
           echo ':x: textlint に失敗しました。  ' >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
