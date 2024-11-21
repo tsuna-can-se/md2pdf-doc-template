@@ -11,6 +11,7 @@ on:
       - ".markdownlint.yaml"
       - ".textlintignore"
       - ".textlintrc.json"
+      - "cspell.json"
       - "package-lock.json"
       - "package.json"
       - "*.md"
