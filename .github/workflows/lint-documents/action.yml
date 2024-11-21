@@ -23,7 +23,7 @@ runs:
       shell: bash
       run: |
         echo '## CSpell result' >> $GITHUB_STEP_SUMMARY
-        npx cspell lint --gitignore --show-context --show-suggestions . >& cspell-result.txt
+        npm run lint:cspell-all >& cspell-result.txt
         echo ':heavy_check_mark: CSpell に成功しました。' >> $GITHUB_STEP_SUMMARY
 
     - name: CSpell 失敗時の結果表示
