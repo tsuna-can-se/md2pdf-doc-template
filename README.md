@@ -31,8 +31,9 @@ Markdown ファイルを PDF 形式に変換する機能を含んでいます。
 ### テンプレートを用いたリポジトリの作成
 
 GitHub 上で、このリポジトリをテンプレートとしたご自身のリポジトリを作成します。
+md2pdf-doc-template リポジトリのトップにある [Use this template] \> [Create a new repository] から作成できます。
 
-T.B.D.
+![image](https://github.com/user-attachments/assets/9b79b568-209c-4605-aaeb-86571d90346a)
 
 リポジトリを作成したら、ローカルマシンにクローンしてください。
 
