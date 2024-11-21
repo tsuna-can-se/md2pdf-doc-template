@@ -42,7 +42,7 @@ runs:
       shell: bash
       run: |
         echo '## Markdownlint result' >> $GITHUB_STEP_SUMMARY
-        npx markdownlint-cli2 --config .markdownlint-cli2.jsonc >& markdownlint-result.txt
+        npm run lint:markdownlint-all >& markdownlint-result.txt
         echo ':heavy_check_mark: Markdownlint に成功しました。' >> $GITHUB_STEP_SUMMARY
 
     - name: Markdownlint 失敗時の結果表示
