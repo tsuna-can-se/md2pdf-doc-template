@@ -10,10 +10,11 @@ on:
       - ".markdownlint-cli2.jsonc"
       - ".markdownlint.yaml"
       - ".textlintignore"
-      - ".textlintrc.json"
+      - ".textlintrc"
+      - "cspell.json"
       - "package-lock.json"
       - "package.json"
-      - "README.md"
+      - "*.md"
   workflow_dispatch:
 
 jobs:

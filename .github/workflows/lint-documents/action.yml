@@ -23,7 +23,7 @@ runs:
       shell: bash
       run: |
         echo '## CSpell result' >> $GITHUB_STEP_SUMMARY
-        npx cspell lint --gitignore --show-context --show-suggestions . >& cspell-result.txt
+        npm run lint:cspell-all >& cspell-result.txt
         echo ':heavy_check_mark: CSpell に成功しました。' >> $GITHUB_STEP_SUMMARY
 
     - name: CSpell 失敗時の結果表示
@@ -42,7 +42,7 @@ runs:
       shell: bash
       run: |
         echo '## Markdownlint result' >> $GITHUB_STEP_SUMMARY
-        npx markdownlint-cli2 --config .markdownlint-cli2.jsonc >& markdownlint-result.txt
+        npm run lint:markdownlint-all >& markdownlint-result.txt
         echo ':heavy_check_mark: Markdownlint に成功しました。' >> $GITHUB_STEP_SUMMARY
 
     - name: Markdownlint 失敗時の結果表示
@@ -59,7 +59,7 @@ runs:
       shell: bash
       run: |
         echo '## textlint result' >> $GITHUB_STEP_SUMMARY
-        npx textlint README.md docs --output-file textlint-result.txt --format compact
+        npm run lint:textlint-all -- --output-file textlint-result.txt --format compact
         if [ -f textlint-result.txt ]; then
           echo ':x: textlint に失敗しました。  ' >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
