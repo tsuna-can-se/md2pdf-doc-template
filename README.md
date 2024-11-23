@@ -66,6 +66,9 @@ npm run build
 
 初期状態だと、 \/docs\/\_document-template\/contents.md を PDF 化して \/output\/ドキュメントテンプレート.pdf が生成されます。
 
+> [!NOTE]
+> 出力した PDF のサンプルは [PDF のサンプル](/pdf-sample.md) をご覧ください。
+
 ## ドキュメントの追加方法
 
 ### ドキュメントテンプレートのコピーとリネーム
