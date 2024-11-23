@@ -26,7 +26,7 @@ Markdown ファイルを PDF 形式に変換する機能を含んでいます。
 
 > [!NOTE]
 > 既定では、 Windows 環境で動作するように設定されています。
-> Windows 以外の環境をご利用の場合は、 /docs/base-style.css と md-to-pdf-config.js のフォント設定を調整してください。
+> Windows 以外の環境をご利用の場合は、 /docs/base-style.css と /md-to-pdf-config.js のフォント設定を調整してください。
 
 ### テンプレートを用いたリポジトリの作成
 
