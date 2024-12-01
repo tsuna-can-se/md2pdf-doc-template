@@ -46,6 +46,7 @@ dest: ./output/ドキュメントテンプレート.pdf
     - [2.14. 引用](#214-引用)
     - [2.15. 水平線](#215-水平線)
     - [2.16. エスケープ](#216-エスケープ)
+    - [2.17. 警告 ( Admonition )](#217-警告--admonition-)
 - [3. 参考資料](#3-参考資料)
 
 # 1. ドキュメントの全体設定
@@ -398,6 +399,72 @@ flowchart TD
 これは次のようにレンダリングされます。
 
 \# \" \| \( \) \. \"
+
+## 2.17. 警告 ( Admonition )
+
+!!! abstract abstract
+abstract の内容。
+!!!
+
+!!! attention attention
+attention の内容。
+!!!
+
+!!! bug bug
+bug の内容。
+!!!
+
+!!! caution caution
+caution の内容。
+!!!
+
+!!! danger danger
+danger の内容。
+!!!
+
+!!! error error
+error の内容。
+!!!
+
+!!! example example
+example の内容。
+!!!
+
+!!! failure failure
+failure の内容。
+!!!
+
+!!! hint hint
+hint の内容。
+!!!
+
+!!! info info
+info の内容。
+!!!
+
+!!! note note
+note の内容。
+!!!
+
+!!! question question
+question の内容。
+!!!
+
+!!! quote quote
+quote の内容。
+!!!
+
+!!! success success
+success の内容。
+!!!
+
+!!! tip tip
+tip の内容。
+!!!
+
+!!! warning warning
+warning の内容。
+!!!
 
 # 3. 参考資料
 
