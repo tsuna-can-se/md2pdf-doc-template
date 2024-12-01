@@ -1,3 +1,5 @@
+const admonition = require('marked-admonition-extension');
+
 const mermaid_renderer = {
     code(code, infoString) {
         if (infoString === 'mermaid'){
@@ -11,6 +13,7 @@ module.exports = {
 	stylesheet: ["https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.7.0/github-markdown.min.css",
         "docs/base-style.css"],
 	body_class: 'markdown-body',
+    marked_extensions: [ admonition.default ],
 	marked_options: [{ mermaid_renderer }],
 	pdf_options: {
 		format: 'a4',
