@@ -250,6 +250,7 @@ h6 {
     font-weight: bold;
     margin-bottom: var(--admonition-line-margin);
     padding-top: var(--admonition-line-margin);
+    page-break-after: avoid;
     text-indent: 0;
   }
 
