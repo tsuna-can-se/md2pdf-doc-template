@@ -76,3 +76,9 @@ PDF 上でチェックボックスのオン / オフを切り替えることは�
 ## 引用
 
 ![image](https://github.com/user-attachments/assets/ba7d88ef-b35b-4f46-87e8-e2733ca10dba)
+
+## アラート
+
+全部で 16 種類のアラートが利用できます。
+
+![image](https://github.com/user-attachments/assets/3c4cc088-5c23-40fb-9e63-80b0c4aaadb3)
