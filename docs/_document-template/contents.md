@@ -402,6 +402,77 @@ flowchart TD
 
 ## 2.17. アラート
 
+コンテンツの重要な部分を目立たせるために、本文内に囲み記事（アラート）を作成できます。
+アラートは、以下の構文で作成します。
+
+```md
+!!! <アラートの種類> <タイトル>
+アラートの本文。
+!!!
+```
+
+アラートの種類は、次から選択します。
+アラートの種類に応じて、配色とアイコンが変わります。
+
+<!-- textlint-disable ja-technical-writing/sentence-length -->
+<!-- markdownlint-disable-next-line MD013 -->
+`abstract` / `attention` / `bug` / `caution` / `danger` / `error` / `example` / `failure` / `hint` / `info` / `note` / `question` / `quote` / `success` / `tip` / `warning`
+<!-- textlint-enable ja-technical-writing/sentence-length -->
+
+<!-- コードブロックの記述例を示すため、チルダでコードブロックを記述 -->
+<!-- markdownlint-disable-next-line MD048 -->
+~~~md
+!!! tip アラートの例
+アラートの種類に応じて配色が変わります。
+アラートの種類に前述の文字列を指定しないと、正しく表示されません。
+`!!!` で囲った範囲には、複数の行を配置できます。
+
+空行を設けると、本文と同様に改行できます。
+コードブロックも配置できます。
+
+```java
+System.out.println("Hello, World!");
+```
+
+画像の配置や `mermaid` の利用もできます。
+
+![demo 画像](/docs/_document-template/images/small-image.svg)
+
+```mermaid
+flowchart LR
+    開始 --> 終了
+```
+
+!!!
+~~~
+
+これは次のようにレンダリングされます。
+
+!!! tip アラートの例
+アラートの種類に応じて配色が変わります。
+アラートの種類に前述の文字列を指定しないと、正しく表示されません。
+`!!!` で囲った範囲には、複数の行を配置できます。
+
+空行を設けると、本文と同様に改行できます。
+コードブロックも配置できます。
+
+```java
+System.out.println("Hello, World!");
+```
+
+画像の配置や `mermaid` の利用もできます。
+
+![demo 画像](/docs/_document-template/images/small-image.svg)
+
+```mermaid
+flowchart LR
+    開始 --> 終了
+```
+
+!!!
+
+アラートの種類ごとの配色およびアイコンの例は、次のとおりです。
+
 !!! abstract abstract
 abstract の内容。
 !!!
