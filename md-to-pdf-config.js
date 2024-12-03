@@ -24,7 +24,7 @@ module.exports = {
 	},
     script: [
         { url: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js' },  
-        { content: "mermaid.initialize({ startOnLoad: false, themeVariables: { fontSize: '16px', fontFamily: 'Yu Gothic UI, system-ui' } }); (async () => { await mermaid.run(); })();" }
+        { content: "mermaid.initialize({ startOnLoad: false, themeVariables: { fontSize: '14px', fontFamily: 'Yu Gothic UI, system-ui' } }); (async () => { await mermaid.run(); })();" }
     ],
 	stylesheet_encoding: 'utf-8',
 };
