@@ -46,6 +46,7 @@ dest: ./output/ドキュメントテンプレート.pdf
     - [2.14. 引用](#214-引用)
     - [2.15. 水平線](#215-水平線)
     - [2.16. エスケープ](#216-エスケープ)
+    - [2.17. アラート](#217-アラート)
 - [3. 参考資料](#3-参考資料)
 
 # 1. ドキュメントの全体設定
@@ -398,6 +399,143 @@ flowchart TD
 これは次のようにレンダリングされます。
 
 \# \" \| \( \) \. \"
+
+## 2.17. アラート
+
+コンテンツの重要な部分を目立たせるために、本文内に囲み記事（アラート）を作成できます。
+アラートは、以下の構文で作成します。
+
+```md
+!!! <アラートの種類> <タイトル>
+アラートの本文。
+!!!
+```
+
+アラートの種類は、次から選択します。
+アラートの種類に応じて、配色とアイコンが変わります。
+
+<!-- textlint-disable ja-technical-writing/sentence-length -->
+<!-- markdownlint-disable-next-line MD013 -->
+`abstract` / `attention` / `bug` / `caution` / `danger` / `error` / `example` / `failure` / `hint` / `info` / `note` / `question` / `quote` / `success` / `tip` / `warning`
+<!-- textlint-enable ja-technical-writing/sentence-length -->
+
+<!-- コードブロックの記述例を示すため、チルダでコードブロックを記述 -->
+<!-- markdownlint-disable-next-line MD048 -->
+~~~md
+!!! tip アラートの例
+アラートの種類に応じて配色が変わります。
+アラートの種類に前述の文字列を指定しないと、正しく表示されません。
+`!!!` で囲った範囲には、複数の行を配置できます。
+
+空行を設けると、本文と同様に改行できます。
+コードブロックも配置できます。
+
+```java
+System.out.println("Hello, World!");
+```
+
+画像の配置や `mermaid` の利用もできます。
+
+![demo 画像](/docs/_document-template/images/small-image.svg)
+
+```mermaid
+flowchart LR
+    開始 --> 終了
+```
+
+!!!
+~~~
+
+これは次のようにレンダリングされます。
+
+!!! tip アラートの例
+アラートの種類に応じて配色が変わります。
+アラートの種類に前述の文字列を指定しないと、正しく表示されません。
+`!!!` で囲った範囲には、複数の行を配置できます。
+
+空行を設けると、本文と同様に改行できます。
+コードブロックも配置できます。
+
+```java
+System.out.println("Hello, World!");
+```
+
+画像の配置や `mermaid` の利用もできます。
+
+![demo 画像](/docs/_document-template/images/small-image.svg)
+
+```mermaid
+flowchart LR
+    開始 --> 終了
+```
+
+!!!
+
+アラートの種類ごとの配色およびアイコンの例は、次のとおりです。
+
+!!! abstract abstract
+abstract の内容。
+!!!
+
+!!! attention attention
+attention の内容。
+!!!
+
+!!! bug bug
+bug の内容。
+!!!
+
+!!! caution caution
+caution の内容。
+!!!
+
+!!! danger danger
+danger の内容。
+!!!
+
+!!! error error
+error の内容。
+!!!
+
+!!! example example
+example の内容。
+!!!
+
+!!! failure failure
+failure の内容。
+!!!
+
+!!! hint hint
+hint の内容。
+!!!
+
+!!! info info
+info の内容。
+!!!
+
+!!! note note
+note の内容。
+!!!
+
+!!! question question
+question の内容。
+!!!
+
+!!! quote quote
+quote の内容。
+!!!
+
+!!! success success
+success の内容。
+!!!
+
+!!! tip tip
+tip の内容。
+!!!
+
+!!! warning warning
+warning の内容。
+!!!
 
 # 3. 参考資料
 

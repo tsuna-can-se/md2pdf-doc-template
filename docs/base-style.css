@@ -56,6 +56,7 @@ h6 {
 
 .markdown-body svg p {
     text-indent: 0em;
+    padding: 0;
 }
 
 /* 表紙の設定 */
@@ -98,4 +99,166 @@ h6 {
     font-size: 14px;
 }
 
-/* cspell:ignore hljs */
+/* Admonition */
+.admonition {
+    --admonition-background-color: #eeeeee; /* デフォルトの背景色 */
+    --admonition-border-color: #999999; /* デフォルトボーダーのカラー */
+    --admonition-border-radius: 5px;
+    --admonition-border-width: 1px;
+    --admonition-font-size: 14px;
+    --admonition-icon: "〇"; /* デフォルトのアイコン */
+    --admonition-icon-color: inherit; /* デフォルトのアイコンカラー */
+    --admonition-line-margin: calc(var(--admonition-font-size) * 0.5);
+    --admonition-title-color: #000000; /* デフォルトのタイトルカラー */
+    border: var(--admonition-border-width) solid var(--admonition-border-color);
+    border-radius: var(--admonition-border-radius);
+    font-size: var(--admonition-font-size);
+    margin: 20px 5px;
+  }
+
+  /* Admonition abstract */
+  .admonition-abstract {
+    --admonition-background-color: #D1C4E9;
+    --admonition-border-color: #6A4C9C;
+    --admonition-icon: "📃";
+  }
+
+  /* Admonition attention */
+  .admonition-attention {
+    --admonition-background-color: #FFF3CD;
+    --admonition-border-color: #FF8F00;
+    --admonition-icon: "⚠";
+    --admonition-icon-color: var(--admonition-border-color);
+  }
+
+  /* Admonition bug */
+  .admonition-bug {
+    --admonition-background-color: #FDE2E2;
+    --admonition-border-color: #E57373;
+    --admonition-icon: "🕷";
+    --admonition-icon-color: #DC3545;
+  }
+
+  /* Admonition caution */
+  .admonition-caution {
+    --admonition-background-color: #FFE0B2;
+    --admonition-border-color: #FF9800;
+    --admonition-icon: "💣";
+  }
+
+  /* Admonition danger */
+  .admonition-danger {
+    --admonition-background-color: #F8D7DA;
+    --admonition-border-color: #DC3545;
+    --admonition-icon: "💀";
+  }
+
+  /* Admonition error */
+  .admonition-error {
+    --admonition-background-color: #FDE2E2;
+    --admonition-border-color: #E57373;
+    --admonition-icon: "❌";
+  }
+
+  /* Admonition example */
+  .admonition-example {
+    --admonition-background-color: #EDE7F6;
+    --admonition-border-color: #673AB7;
+    --admonition-icon: "📚";
+  }
+
+  /* Admonition failure */
+  .admonition-failure {
+    --admonition-background-color: #FDE2E2;
+    --admonition-border-color: #E57373;
+    --admonition-icon: "❌";
+  }
+
+  /* Admonition hint */
+  .admonition-hint {
+    --admonition-background-color: #E7F9E7;
+    --admonition-border-color: #8BC34A;
+    --admonition-icon: "💡";
+  }
+
+  /* Admonition info */
+  .admonition-info {
+    --admonition-background-color: #E3F2FD;
+    --admonition-border-color: #1976D2;
+    --admonition-icon: "ⓘ";
+    --admonition-icon-color: var(--admonition-border-color);
+  }
+
+  /* Admonition note */
+  .admonition-note {
+    --admonition-background-color: #E3F2FD;
+    --admonition-border-color: #1976D2;
+    --admonition-icon: "📝";
+  }
+
+  /* Admonition question */
+  .admonition-question {
+    --admonition-background-color: #E7F9D9;
+    --admonition-border-color: #7CB342;
+    --admonition-icon: "？";
+    --admonition-icon-color: #388E3C;
+  }
+
+  /* Admonition quote */
+  .admonition-quote {
+    --admonition-background-color: #F5F5F5;
+    --admonition-border-color: #9E9E9E;
+    --admonition-icon: "👀";
+  }
+
+  /* Admonition success */
+  .admonition-success {
+    --admonition-background-color: #E8F5E9;
+    --admonition-border-color: #388E3C;
+    --admonition-icon: "✔";
+    --admonition-icon-color: var(--admonition-border-color);
+  }
+
+  /* Admonition tip */
+  .admonition-tip {
+    --admonition-background-color: #E0F2F1;
+    --admonition-border-color: #009688;
+    --admonition-icon: "💡";
+  }
+
+  /* Admonition warning */
+  .admonition-warning {
+    --admonition-background-color: #FFF3CD;
+    --admonition-border-color: #FF8F00;
+    --admonition-icon: "⚠";
+    --admonition-icon-color: var(--admonition-border-color);
+  }
+
+  .admonition p {
+    margin: 0;
+    padding: 0 var(--admonition-font-size) var(--admonition-line-margin) var(--admonition-font-size);
+  }
+
+  .admonition pre {
+    margin: 0 var(--admonition-font-size) var(--admonition-line-margin) var(--admonition-font-size);
+  }
+
+  .admonition .admonition-title {
+    background-color: var(--admonition-background-color);
+    border-radius: var(--admonition-border-radius) var(--admonition-border-radius) 0 0;
+    color: var(--admonition-title-color);
+    font-weight: bold;
+    margin-bottom: var(--admonition-line-margin);
+    padding-top: var(--admonition-line-margin);
+    page-break-after: avoid;
+    text-indent: 0;
+  }
+
+  .admonition .admonition-title::before {
+    content: var(--admonition-icon);
+    color: var(--admonition-icon-color);
+    font-weight: normal;
+    margin-right: calc(var(--admonition-font-size) * 0.5); /* アイコンとテキストの間にスペース */
+  }
+    
+  /* cspell:ignore hljs */
