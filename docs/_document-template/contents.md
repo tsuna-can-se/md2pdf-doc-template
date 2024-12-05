@@ -176,25 +176,43 @@ Markdown All in One の機能を利用して目次を作成する場合、見出
 
 Java の例。
 
+<!-- コードブロックの記述例を示すため、チルダでコードブロックを記述 -->
+<!-- markdownlint-disable-next-line MD048 -->
+~~~md
 ```java
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
+public static void main(String[] args) {
+    System.out.println("Hello, World!");
+}
+```
+~~~
+
+これは次のようにレンダリングされます。
+
+```java
+public static void main(String[] args) {
+    System.out.println("Hello, World!");
 }
 ```
 
 C# の例。
 
+<!-- コードブロックの記述例を示すため、チルダでコードブロックを記述 -->
+<!-- markdownlint-disable-next-line MD048 -->
+~~~md
 ```csharp
-using System;
-
-class Program
+static void Main(int[] args)
 {
-    static void Main(int[] args)
-    {
-        Console.WriteLine("Hello, World!");
-    }
+    Console.WriteLine("Hello, World!");
+}
+```
+~~~
+
+これは次のようにレンダリングされます。
+
+```csharp
+static void Main(int[] args)
+{
+    Console.WriteLine("Hello, World!");
 }
 ```
 
