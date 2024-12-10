@@ -1,5 +1,6 @@
 {
     "ignorePaths": [
+        ".git",
         ".textlintrc",
         ".vscode",
         "cspell.json",
