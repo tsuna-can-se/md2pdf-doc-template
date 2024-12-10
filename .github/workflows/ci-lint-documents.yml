@@ -2,7 +2,7 @@ name: ドキュメントのLint
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, development]
     paths:
       - "docs/**"
       - ".github/workflows/ci-lint-documents.yml"
