@@ -3,7 +3,7 @@
         "build": "run-s build:* --continue-on-error --print-label",
         "build:document-template": "npx md-to-pdf --config-file ./md-to-pdf-config.js ./docs/_document-template/contents.md",
         "lint": "run-s lint:* --continue-on-error --print-label",
-        "lint:cspell-all": "npx cspell lint --gitignore --show-context --show-suggestions .",
+        "lint:cspell-all": "npx cspell lint --gitignore --show-context --show-suggestions --dot .",
         "lint:markdownlint-all": "npx markdownlint-cli2 --config .markdownlint-cli2.jsonc",
         "lint:textlint-all": "npx textlint README.md docs"
     },
