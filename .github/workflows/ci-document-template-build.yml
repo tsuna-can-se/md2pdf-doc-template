@@ -3,7 +3,7 @@ name: ドキュメントテンプレートのビルド
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, development]
     paths:
       # ドキュメントの英語名を以下 2 行に設定します。
       - ".github/workflows/ci-document-template-build.yml"
