@@ -278,7 +278,7 @@ flowchart TD
 ```
 ~~~
 
-図は次のようにレンダリングできます。
+これは次のようにレンダリングされます。
 
 ```mermaid
 flowchart TD
