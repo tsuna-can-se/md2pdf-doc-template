@@ -268,7 +268,17 @@ URL を `< >` で囲うと、そのままリンクにできます。
 
 簡単な図は、 [mermaid](https://mermaid.js.org/) で作成できます ( Beta )。
 ` ```mermaid ～ ``` ` で囲った範囲に mermaid 記法で図を記述できます。
-図は次のようにレンダリングできます。
+
+<!-- コードブロックの記述例を示すため、チルダでコードブロックを記述 -->
+<!-- markdownlint-disable-next-line MD048 -->
+~~~md
+```mermaid
+flowchart TD
+    開始 --> 終了
+```
+~~~
+
+これは次のようにレンダリングされます。
 
 ```mermaid
 flowchart TD
