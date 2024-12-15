@@ -45,7 +45,7 @@
 
 [Mermaid](https://mermaid.js.org/) の構文を入れることもできます。
 
-![Mermaid のサンプル](https://github.com/user-attachments/assets/23bede4b-f6c8-44e1-a535-8b5f9352e0c1)
+![Mermaid のサンプル](https://github.com/user-attachments/assets/8f896815-0346-403c-a330-cac7bb01dd8f)
 
 ## テーブル
 
