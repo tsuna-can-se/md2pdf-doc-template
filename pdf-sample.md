@@ -41,11 +41,11 @@
 
 \*\.svg 形式のファイルにも対応しています。
 
-![画像貼り付けのサンプル](https://github.com/user-attachments/assets/9dbf143c-d536-4c35-aedf-fe3f2839795b)
+![画像貼り付けのサンプル](https://github.com/user-attachments/assets/07502d0d-2491-4ac9-8b68-402074b0a020)
 
 [Mermaid](https://mermaid.js.org/) の構文を入れることもできます。
 
-![Mermaid のサンプル](https://github.com/user-attachments/assets/8f896815-0346-403c-a330-cac7bb01dd8f)
+![Mermaid のサンプル](https://github.com/user-attachments/assets/7546d248-6fba-45e6-99a6-fbe35156da0a)
 
 ## テーブル
 
