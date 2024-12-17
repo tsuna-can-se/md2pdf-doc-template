@@ -41,11 +41,11 @@
 
 \*\.svg 形式のファイルにも対応しています。
 
-![画像貼り付けのサンプル](https://github.com/user-attachments/assets/9dbf143c-d536-4c35-aedf-fe3f2839795b)
+![画像貼り付けのサンプル](https://github.com/user-attachments/assets/07502d0d-2491-4ac9-8b68-402074b0a020)
 
 [Mermaid](https://mermaid.js.org/) の構文を入れることもできます。
 
-![Mermaid のサンプル](https://github.com/user-attachments/assets/8f896815-0346-403c-a330-cac7bb01dd8f)
+![Mermaid のサンプル](https://github.com/user-attachments/assets/7546d248-6fba-45e6-99a6-fbe35156da0a)
 
 ## テーブル
 
@@ -82,3 +82,12 @@ PDF 上でチェックボックスのオン / オフを切り替えることは�
 全部で 16 種類のアラートが利用できます。
 
 ![アラートのサンプル](https://github.com/user-attachments/assets/3c4cc088-5c23-40fb-9e63-80b0c4aaadb3)
+
+## 数式
+
+[KaTeX](https://katex.org/) を使って数式を記述できます。
+インライン要素、ブロック要素、どちらにも対応しています。
+
+![数式（インライン要素）のサンプル](https://github.com/user-attachments/assets/34f62912-1946-43e8-b95a-93d544fcbe8b)
+
+![数式（ブロック要素）のサンプル](https://github.com/user-attachments/assets/f987245c-9fae-4c30-8743-750a87ede06d)
