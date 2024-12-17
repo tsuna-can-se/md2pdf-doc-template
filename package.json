@@ -1,4 +1,5 @@
 {
+    "type": "commonjs",
     "scripts": {
         "build": "run-s build:* --continue-on-error --print-label",
         "build:document-template": "npx md-to-pdf --config-file ./md-to-pdf-config.js ./docs/_document-template/contents.md",
