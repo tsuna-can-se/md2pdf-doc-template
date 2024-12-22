@@ -54,6 +54,14 @@
 
 ![テーブルのサンプル](https://github.com/user-attachments/assets/ff980539-0c87-443c-9fdd-bc1427a1007f)
 
+拡張構文を用いれば、セルの結合ができます。
+
+![列の結合サンプル](https://github.com/user-attachments/assets/e9821346-3c06-4b89-9aad-00cabb18ee6d)
+
+![行の結合サンプル](https://github.com/user-attachments/assets/266c9bcb-27c9-4089-91b3-6798f2ab59a4)
+
+![ヘッダーの結合サンプル](https://github.com/user-attachments/assets/058ac42e-06b5-4db1-a1ee-0fd6d5fc106a)
+
 ## 箇条書き
 
 箇条書きは、インデントをつけると階層化できます。

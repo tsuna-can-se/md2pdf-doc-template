@@ -1,5 +1,6 @@
 const admonition = require('marked-admonition-extension');
 const markedKatex = require('marked-katex-extension');
+const extendedTables = require("marked-extended-tables");
 
 const markedKatexOptions = {
     throwOnError: false
@@ -21,7 +22,7 @@ module.exports = {
         "docs/base-style.css"
     ],
 	body_class: 'markdown-body',
-    marked_extensions: [ admonition.default, markedKatex(markedKatexOptions) ],
+    marked_extensions: [ admonition.default, markedKatex(markedKatexOptions), extendedTables() ],
 	marked_options: [{ mermaid_renderer }],
 	pdf_options: {
 		format: 'a4',

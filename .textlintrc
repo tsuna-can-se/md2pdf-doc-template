@@ -43,6 +43,7 @@
     "ja-no-orthographic-variants": true,
     "@textlint-ja/no-synonyms": {
       "allows": [
+        "=",
         "運用",
         "開催",
         "完了",
