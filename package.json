@@ -16,7 +16,7 @@
         "marked-extended-tables": "^2.0.1",
         "marked-katex-extension": "^5.1.4",
         "md-to-pdf": "^5.2.4",
-        "npm-run-all2": "^8.0.3",
+        "npm-run-all2": "^8.0.4",
         "sudachi-synonyms-dictionary": "^14.0.0",
         "textlint": "^14.7.2",
         "textlint-filter-rule-comments": "^1.2.2",
