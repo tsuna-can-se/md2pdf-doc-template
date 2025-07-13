@@ -24,10 +24,10 @@
 }
 
 .markdown-body h2,
-h3,
-h4,
-h5,
-h6 {
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
     page-break-after: avoid;
 }
 
