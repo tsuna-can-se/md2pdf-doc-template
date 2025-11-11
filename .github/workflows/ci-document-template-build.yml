@@ -20,7 +20,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: ブランチのチェックアウト
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 1
           lfs: true
