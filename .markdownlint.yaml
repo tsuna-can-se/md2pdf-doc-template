@@ -31,3 +31,7 @@ MD041: false
 # Disabled to prevent false detection of code blocks because there are times when indented text is written under bullet points.
 # 箇条書きの下にインデントした文字を書くことがあるため、コードブロックの誤検知を防ぐ目的で無効化。
 MD046: false
+
+# Disabled because it includes table extended syntax.
+# テーブルの拡張構文を含むため無効化。
+MD060: false
