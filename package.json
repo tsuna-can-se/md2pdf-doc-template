@@ -14,7 +14,7 @@
         "markdownlint-cli2": "^0.20.0",
         "marked-admonition-extension": "^0.0.4",
         "marked-extended-tables": "^2.0.1",
-        "marked-katex-extension": "^5.1.6",
+        "marked-katex-extension": "^5.1.7",
         "md-to-pdf": "^5.2.5",
         "npm-run-all2": "^8.0.4",
         "sudachi-synonyms-dictionary": "^17.0.0",
