@@ -20,10 +20,14 @@ runs:
 
     - name: Puppeteer ブラウザキャッシュのクリア
       shell: bash
-      run: rm -rf "$HOME/.cache/puppeteer"
+      env:
+        PUPPETEER_CACHE_DIR: ${{ runner.temp }}/puppeteer-cache
+      run: rm -rf "$PUPPETEER_CACHE_DIR"
 
     - name: Chrome のインストール
       shell: bash
+      env:
+        PUPPETEER_CACHE_DIR: ${{ runner.temp }}/puppeteer-cache
       run: npx puppeteer browsers install chrome
 
     - name: ドキュメントの PDF 化処理開始
@@ -34,6 +38,8 @@ runs:
       id: run-md-to-pdf
       continue-on-error: true
       shell: bash
+      env:
+        PUPPETEER_CACHE_DIR: ${{ runner.temp }}/puppeteer-cache
       run: |
         npm run ${{ inputs.build-script-name }} >& build-result.txt
         echo ':heavy_check_mark: ドキュメントの PDF 化に成功しました。' >> $GITHUB_STEP_SUMMARY
