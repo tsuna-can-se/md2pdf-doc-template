@@ -18,6 +18,10 @@ runs:
       shell: bash
       run: npm ci
 
+    - name: Puppeteer ブラウザキャッシュのクリア
+      shell: bash
+      run: rm -rf "$HOME/.cache/puppeteer"
+
     - name: Chrome のインストール
       shell: bash
       run: npx puppeteer browsers install chrome
