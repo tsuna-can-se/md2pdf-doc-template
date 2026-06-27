@@ -7,6 +7,7 @@ on:
     paths:
       # ドキュメントの英語名を以下 2 行に設定します。
       - ".github/workflows/ci-document-template-build.yml"
+      - ".github/workflows/build-document/action.yml"
       - "docs/_document-template/**"
       - "docs/_shared-images/**"
       - "docs/base-style.css"
