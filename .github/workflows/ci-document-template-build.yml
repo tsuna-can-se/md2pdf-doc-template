@@ -7,6 +7,7 @@ on:
     paths:
       # ドキュメントの英語名を以下 2 行に設定します。
       - ".github/workflows/ci-document-template-build.yml"
+      - ".github/workflows/build-document/action.yml"
       - "docs/_document-template/**"
       - "docs/_shared-images/**"
       - "docs/base-style.css"
@@ -20,7 +21,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: ブランチのチェックアウト
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           fetch-depth: 1
           lfs: true
