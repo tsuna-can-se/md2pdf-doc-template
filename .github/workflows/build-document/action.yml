@@ -30,8 +30,6 @@ runs:
       id: run-md-to-pdf
       continue-on-error: true
       shell: bash
-      env:
-        PUPPETEER_CACHE_DIR: ${{ runner.temp }}/puppeteer-cache
       run: |
         npm run ${{ inputs.build-script-name }} >& build-result.txt
         echo ':heavy_check_mark: ドキュメントの PDF 化に成功しました。' >> $GITHUB_STEP_SUMMARY
