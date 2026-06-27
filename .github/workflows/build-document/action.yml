@@ -18,6 +18,10 @@ runs:
       shell: bash
       run: npm ci
 
+    - name: Chrome のインストール
+      shell: bash
+      run: npx puppeteer browsers install chrome
+
     - name: ドキュメントの PDF 化処理開始
       shell: bash
       run: echo '# Document build result :newspaper:' >> $GITHUB_STEP_SUMMARY
