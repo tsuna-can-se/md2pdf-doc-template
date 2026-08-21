@@ -14,7 +14,7 @@
         "markdownlint-cli2": "^0.23.1",
         "marked-admonition-extension": "^0.0.4",
         "marked-extended-tables": "^2.0.1",
-        "marked-katex-extension": "^5.1.9",
+        "marked-katex-extension": "^5.1.11",
         "md-to-pdf": "^5.2.5",
         "npm-run-all2": "^9.0.1",
         "puppeteer": "25.3.0",
